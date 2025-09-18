@@ -22,7 +22,7 @@ class Solution:
 
 
         # N : len(people), M : limit
-        # Time Complexity: O(N + M + N + M)
+        # Time Complexity: O(2N + M)
         # Space Complexity: O(M)
         n = len(people)
         maxPeople = max(people)
