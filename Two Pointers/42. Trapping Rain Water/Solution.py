@@ -6,29 +6,29 @@ class Solution:
         # Time Complexity: O(N^2)
         # Space Complexity: O(1)
         # n = len(height)
-        # pre = 0
+        # preMax = 0
         # trappedRainWater = 0
         # for l in range(n):
-        #     post = 0
+        #     postMax = 0
         #     for r in range(l, n):
-        #         post = max(post, height[r])
-        #     pre = max(pre, height[l])
-        #     trappedRainWater += min(pre, post) - height[l] 
+        #         postMax = max(postMax, height[r])
+        #     preMax = max(preMax, height[l])
+        #     trappedRainWater += min(preMax, postMax) - height[l] 
         # return trappedRainWater
 
         # N : len(height)
         # Time Complexity: O(3N)
         # Space Complexity: O(2N)
         # n = len(height)
-        # pre = height.copy()
-        # post = height.copy()
+        # preMax = height.copy()
+        # postMax = height.copy()
         # for i in range(1, n):
-        #     pre[i] = max(pre[i], pre[i - 1])
-        #     post[n - i - 1] = max(post[n - i - 1], post[n - i])
+        #     preMax[i] = max(preMax[i], preMax[i - 1])
+        #     postMax[n - i - 1] = max(postMax[n - i - 1], postMax[n - i])
         
         # trappedRainWater = 0
         # for i in range(n):
-        #     trappedRainWater += min(pre[i], post[i]) - height[i]
+        #     trappedRainWater += min(preMax[i], postMax[i]) - height[i]
         # return trappedRainWater
 
 
@@ -36,9 +36,9 @@ class Solution:
         # Time Complexity: O(N)
         # Space Complexity: O(1)
         n = len(height)
-        l, r = -1, n
+        l, r = 0, n - 1
         trappedRainWater = 0
-        preMax, postMax = 0, 0
+        preMax, postMax = height[l], height[r]
         while l < r:
             if preMax < postMax:
                 l += 1
