@@ -39,15 +39,15 @@ class Solution:
         # Time Complexity: O(N)
         # Space Complexity: O(26)
         n = len(s)
-        charFreqMap = defaultdict(int)
+        charFreqMap = [0] * 26
         longestSubString = 0
         maxCharFreq = 0
         l, r = 0, 0
         while r < n:
-            charFreqMap[s[r]] += 1
-            maxCharFreq = max(maxCharFreq, charFreqMap[s[r]])
+            charFreqMap[ord(s[r]) - ord('A')] += 1
+            maxCharFreq = max(maxCharFreq, charFreqMap[ord(s[r]) - ord('A')])
             if (r - l + 1) - maxCharFreq > k:
-                charFreqMap[s[l]] -= 1
+                charFreqMap[ord(s[l]) - ord('A')] -= 1
                 l += 1
             longestSubString = max(longestSubString, (r - l + 1))
             r += 1
