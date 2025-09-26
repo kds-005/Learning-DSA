@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.lang.Math;
+
 class Solution {
     private int dfs(int idx, int[] nums, int[] dp){
         if (idx >= nums.length){
