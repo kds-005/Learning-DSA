@@ -40,7 +40,7 @@
 
 
 # N : Total number of elements added
-# Time Complexity : Creating MyQueue Object - O(1), push() - O(1), pop() - O(N), peek() - O(N), empty() - O(1)
+# Time Complexity : Creating MyQueue Object - O(1), push() - O(1), pop() - O(1), peek() - O(1), empty() - O(1)
 # Space Complexity : O(N)
 class MyQueue:
     def __init__(self):
