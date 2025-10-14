@@ -6,9 +6,9 @@ class Solution:
         # Time Complexity: O(2^(2 * N) * N)
         # Space Complexity: O(2N * 2N)
         # parentheses = []
-        # def isValidString(sub):
+        # def isValidString(brackets):
         #     stack = []
-        #     for para in sub:
+        #     for para in brackets:
         #         if para == '(':
         #             stack.append(para)
         #         elif para == ')' and len(stack) > 0 and stack[-1] == '(':
@@ -17,16 +17,16 @@ class Solution:
         #             return False
         #     return len(stack) == 0
 
-        # def backtract(openParentheses, closeParentheses, sub):
+        # def backtract(openParentheses, closeParentheses, brackets):
         #     if openParentheses == closeParentheses == n:
-        #         if isValidString(sub):
-        #             parentheses.append(sub)
+        #         if isValidString(brackets):
+        #             parentheses.append(brackets)
         #         return
         #     if openParentheses > n or closeParentheses > n:
         #         return
             
-        #     backtract(openParentheses + 1, closeParentheses, sub + '(')
-        #     backtract(openParentheses, closeParentheses + 1, sub + ')')
+        #     backtract(openParentheses + 1, closeParentheses, brackets + '(')
+        #     backtract(openParentheses, closeParentheses + 1, brackets + ')')
         #     return
 
         # backtract(0, 0, '')
@@ -36,15 +36,15 @@ class Solution:
         # Time Complexity: O(2^(2 * N)) -> witout constraints but with it will be less
         # Space Complexity: O(2N)
         parentheses = []
-        def backtract(openParentheses, closeParentheses, sub):
-            if len(sub) >= n * 2:
-                parentheses.append(sub)
+        def backtract(openParentheses, closeParentheses, brackets):
+            if len(brackets) >= n * 2:
+                parentheses.append(brackets)
                 return
             
             if openParentheses < n and closeParentheses <= openParentheses:
-                backtract(openParentheses + 1, closeParentheses, sub + '(')
+                backtract(openParentheses + 1, closeParentheses, brackets + '(')
             if closeParentheses < n:
-                backtract(openParentheses, closeParentheses + 1, sub + ')')
+                backtract(openParentheses, closeParentheses + 1, brackets + ')')
 
             return
         backtract(0, 0, '')
