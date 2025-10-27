@@ -1,5 +1,8 @@
 class Solution:
     def mySqrt(self, x: int) -> int:
+        # N : x
+        # Time Complexity: O(N logN)
+        # Space Complexity: O(1)
         n = x
         l, r = 0, n
         while l <= r:
