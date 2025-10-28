@@ -3,7 +3,7 @@ from typing import List
 class Solution:
     def searchInsert(self, nums: List[int], target: int) -> int:
         # N : len(nums)
-        # Time Complexity : O(N LogN)
+        # Time Complexity : O(logN)
         # Space Complexity: O(1)
         n = len(nums)
         l, r = 0, n - 1

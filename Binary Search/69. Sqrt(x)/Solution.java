@@ -1,7 +1,7 @@
 class Solution {
     public int mySqrt(int x) {
         // N : x
-        // Time Complexity: O(N logN)
+        // Time Complexity: O(logN)
         // Space Complexity: O(1)
         long l = 0;
         long r = x;

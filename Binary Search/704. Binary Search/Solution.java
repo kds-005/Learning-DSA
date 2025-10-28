@@ -1,7 +1,7 @@
 class Solution {
     public int search(int[] nums, int target) {
         // N : len(nums)
-        // Time Complexity: O(N LogN)
+        // Time Complexity: O(logN)
         // Space Complexity: O(1)
         int n = nums.length;
         int l = 0;
