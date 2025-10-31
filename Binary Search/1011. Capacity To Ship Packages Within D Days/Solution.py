@@ -28,7 +28,7 @@ class Solution:
 
 
         # N : len(weights), M : sum(weights) - max(weights)
-        # Time Complexity: O(M * N)
+        # Time Complexity: O(N * logM)
         # Space Complexity: O(1)
         l = max(weights)
         r = sum(weights) + 1
