@@ -1,7 +1,7 @@
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         # M : len(s), N : len(t)
-        # Time Complexity: O(max(logM, logN))
+        # Time Complexity: O(max(MlogM, NlogN))
         # Space Complexity: O(1)
         # s = sorted(s)
         # t = sorted(t)
