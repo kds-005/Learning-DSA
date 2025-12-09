@@ -15,7 +15,7 @@ class Solution:
         if not root:
             return []
         q = deque([root])
-        res = []
+        lvlOrder = []
         while q:
             temp = []
             for _ in range(len(q)):
@@ -25,5 +25,5 @@ class Solution:
                     q.append(node.left)
                 if node.right:
                     q.append(node.right)
-            res.append(temp)
-        return res
+            lvlOrder.append(temp)
+        return lvlOrder
