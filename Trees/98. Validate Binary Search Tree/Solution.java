@@ -1,7 +1,7 @@
 import java.util.*;
 
 //Definition for a binary tree node.
-public class TreeNode {
+class TreeNode {
     int val;
     TreeNode left;
     TreeNode right;
@@ -14,7 +14,7 @@ public class TreeNode {
     }
 }
 
-class Solution {
+public class Solution {
     // private long prev = Long.MIN_VALUE;
     // private Boolean dfs(TreeNode root) {
     //     if (root == null) return true;
